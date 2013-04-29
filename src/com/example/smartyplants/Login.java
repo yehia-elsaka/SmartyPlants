@@ -60,7 +60,7 @@ public class Login extends Activity {
 			menu.setHeaderTitle("Settings ... ");  
 		    menu.add(0, v.getId(), 0, "Register");  
 		    menu.add(0, v.getId(), 0, "App Info");  
-		    menu.add(0, v.getId(), 0, "Quit "); 
+		    menu.add(0, v.getId(), 0, "Quit"); 
 	}  
 	
 	
@@ -69,12 +69,12 @@ public class Login extends Activity {
 	         if(item.getTitle()=="Register")
 	         	{
 	        	 	Regist_fun(item.getItemId());
-	        	}
-         
-             else if(item.getTitle()=="Quit")
-             {
-                 this.finish();
-             }
+	        	} 
+	         
+	         else if(item.getTitle()=="Quit")
+	         	{
+	        	 	this.finish();
+	        	} 
 	     
 	         
 	         return true;  

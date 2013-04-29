@@ -98,7 +98,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="14dp"
                     android:layout_toRightOf="@+id/textView1"
-                    android:background="@drawable/socialbasic"
+                    android:background="@android:color/white"
                     android:ems="10"
                     android:textSize="12sp" >
 
@@ -127,7 +127,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="14dp"
                     android:layout_toRightOf="@+id/textView2"
-                    android:background="@drawable/socialbasic"
+                    android:background="@android:color/white"
                     android:ems="10"
                     android:textSize="12sp" >
 
@@ -157,7 +157,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="14dp"
                     android:layout_toRightOf="@+id/textView3"
-                    android:background="@drawable/socialbasic"
+                    android:background="@android:color/white"
                     android:ems="10"
                     android:textSize="12sp"
                     android:password="true" >
@@ -184,7 +184,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="14dp"
                     android:layout_toRightOf="@+id/textView4"
-                    android:background="@drawable/socialbasic"
+                    android:background="@android:color/white"
                     android:ems="10"
                     android:textSize="12sp" 
                     android:password="true">

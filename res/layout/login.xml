@@ -89,7 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/socialbasic" 
+                    android:background="@android:color/white" 
                     android:textSize="12sp"/>
             </LinearLayout>
 
@@ -110,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/socialbasic"
+                    android:background="@android:color/white"
                     android:textSize="12sp"
                     android:password="true" />
             </LinearLayout>
@@ -141,6 +141,7 @@
                 android:layout_alignBaseline="@+id/forgot_password"
                 android:layout_alignBottom="@+id/forgot_password"
                 android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
                 android:text="Remember Me"
                 android:textSize="12sp" />
 

@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >    
+
+    <FrameLayout
+        android:id="@+id/action_bar_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+        
+        <RelativeLayout
+            android:id="@+id/action_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:background="@drawable/actionbar" >
+
+            <Button
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_action_info" 
+                />
+
+            <ToggleButton
+                android:id="@+id/toggleButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="43dp"
+                android:text="ToggleButton" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="115dp"
+            android:layout_height="56dp"
+            android:gravity="start"
+            android:src="@drawable/logo" 
+            android:layout_marginLeft="10dp"/>
+
+    </FrameLayout>
+    
+    
+    <TabHost 
+	    android:id="@android:id/tabhost"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+	    <LinearLayout
+	        android:orientation="vertical"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent">
+
+	        <TabWidget
+	            android:id="@android:id/tabs"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="-17dp">
+	        </TabWidget>
+
+	        <FrameLayout
+	            android:id="@android:id/tabcontent"
+	            android:layout_width="fill_parent"
+	            android:layout_height="310dp" />
+
+	        <Button
+		        android:id="@+id/load_image"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:layout_margin="7dp"
+		        android:background="@drawable/load_more" />
+
+	    </LinearLayout>
+	</TabHost>
+    
+    
+    
+    
+    
+</LinearLayout>

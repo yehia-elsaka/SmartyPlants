@@ -69,7 +69,12 @@ public class Login extends Activity {
 	         if(item.getTitle()=="Register")
 	         	{
 	        	 	Regist_fun(item.getItemId());
-	        	}  
+	        	}
+         
+             else if(item.getTitle()=="Quit")
+             {
+                 this.finish();
+             }
 	     
 	         
 	         return true;  

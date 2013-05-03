@@ -7,19 +7,10 @@
    
   <!-- Screen Design for ID_Plants -->
 
-  <GridView
-      android:id="@+id/grid_view"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:layout_margin="10dp"
-      android:columnWidth="130dp"
-      android:gravity="center"
-      android:horizontalSpacing="10dip"
-      android:numColumns="auto_fit"
-      android:stretchMode="columnWidth"
-      android:verticalSpacing="10dip" >
-	
-	</GridView>
+  <TextView 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Working on it"/>
 	
   	
      

@@ -2,8 +2,8 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
    
   <!-- Screen Design for  My_Plants -->
   <GridView 
@@ -12,11 +12,12 @@
 	    android:layout_height="fill_parent"
 	    android:numColumns="auto_fit"
 	    android:layout_margin="10dp"
-	    android:columnWidth="130dp"
-	    android:horizontalSpacing="10dip"
-	    android:verticalSpacing="10dip"
+	    android:columnWidth="200dp"
+	    android:horizontalSpacing="10dp"
+	    android:verticalSpacing="10dp"
 	    android:gravity="center"
-	    android:stretchMode="columnWidth" >
+	    android:stretchMode="columnWidth"
+	     >
 	
 	</GridView>
 	

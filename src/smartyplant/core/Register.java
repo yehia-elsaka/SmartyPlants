@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Register extends Activity {
@@ -34,7 +35,7 @@ public class Register extends Activity {
         password_field = (EditText)findViewById(R.id.password_field);
         confirm_field = (EditText)findViewById(R.id.confirm_password_field);
         
-        Button create = (Button)findViewById(R.id.create);
+        ImageView create = (ImageView)findViewById(R.id.create);
         create.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

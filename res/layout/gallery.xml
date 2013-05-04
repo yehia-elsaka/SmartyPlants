@@ -17,7 +17,10 @@
             android:id="@+id/take_picture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Take Picture" />
+            android:text="Take Picture"
+            android:layout_alignTop="@+id/select_gallery"
+            android:layout_alignBottom="@+id/select_gallery"
+            android:drawableLeft="@android:drawable/ic_menu_camera" />
 
         <Button
             android:id="@+id/select_gallery"
@@ -29,22 +32,22 @@
     </RelativeLayout>
     
     
-    <Gallery 
+    <GridView 
 	    android:id="@+id/grid_view"
 	    android:layout_below="@+id/button_group"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:numColumns="auto_fit"
-	    
-	    android:layout_marginBottom="40dp"
 	    android:columnWidth="200dp"
 	    android:horizontalSpacing="10dp"
 	    android:verticalSpacing="10dp"
 	    android:gravity="center"
 	    android:stretchMode="columnWidth"
+	    android:layout_marginBottom="55dp"
 	   />
     
     <Button 
+        android:layout_marginTop="-50dp"
         android:id="@+id/done"
         android:layout_marginBottom="5dp"
         android:layout_below="@+id/grid_view"

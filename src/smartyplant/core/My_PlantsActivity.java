@@ -54,7 +54,7 @@ public class My_PlantsActivity extends Activity {
 	private int getColumnWidth(){
 		Display display = getWindowManager().getDefaultDisplay();
 		int screenWidth = display.getWidth();
-		int colWidth = (screenWidth-50) / 3;
+		int colWidth = (screenWidth-50) / 2;
 		
 		return colWidth;
 	}

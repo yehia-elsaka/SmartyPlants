@@ -16,15 +16,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Take Picture"
+            android:layout_alignTop="@+id/select_gallery"
+            android:layout_alignBottom="@+id/select_gallery"
             android:drawableLeft="@android:drawable/ic_menu_camera" />
 
         <Button
-            android:visibility="gone"
-            android:layout_marginTop="20dp"
+            android:visibility="visible"
             android:id="@+id/select_gallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/take_picture"
+            
             android:text="Select From Gallaery" />
     </RelativeLayout>
 

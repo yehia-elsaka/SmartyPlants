@@ -67,6 +67,7 @@ public class GalleryAdapter extends BaseAdapter{
 		Drawable d = new BitmapDrawable(resizedBitmap);
 		v.setBackgroundDrawable(d);
 		v.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.FILL_PARENT, height));
+		
 		return frame;
 	}
 

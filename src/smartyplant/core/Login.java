@@ -72,7 +72,7 @@ public class Login extends Activity {
                 			startActivity(intent);
                 		}
                 
-                		else if (item.getTitle().equals("Quit")) {
+                		else if (item.getTitle().equals("Quit ...")) {
                 			mActivity.finish();
                 		}
                         return true;

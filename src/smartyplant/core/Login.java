@@ -1,7 +1,9 @@
 package smartyplant.core;
 
+
 import smartyplant.Network.DataConnector;
 import smartyplant.Utils.GlobalState;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -9,17 +11,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
+import android.widget.PopupMenu.OnMenuItemClickListener;
 import android.widget.Toast;
 
+@SuppressLint("NewApi")
 public class Login extends Activity {
 	String user_name = "";
 	String password = "";
@@ -27,7 +30,8 @@ public class Login extends Activity {
 	EditText password_field;
 	CheckBox remember_me;
 	Context mContext = this;
-
+	Activity mActivity = this;
+	
 	GlobalState globalState = GlobalState.getInstance();
 	DataConnector dataConnector = DataConnector.getInstance();
 	SharedPreferences prefs;
@@ -52,9 +56,32 @@ public class Login extends Activity {
 		settings.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 
-				registerForContextMenu(v);
-				openContextMenu(v);
-				unregisterForContextMenu(v);
+				/** Instantiating PopupMenu class */
+                PopupMenu popup = new PopupMenu(getBaseContext(), v);
+ 
+                /** Adding menu items to the popumenu */
+                popup.getMenuInflater().inflate(R.menu.popup, popup.getMenu());
+ 
+                /** Defining menu item click listener for the popup menu */
+                popup.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+ 
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                    	if (item.getTitle().equals("Register")) {
+                			Intent intent = new Intent(getApplicationContext(), Register.class);
+                			startActivity(intent);
+                		}
+                
+                		else if (item.getTitle().equals("Quit")) {
+                			mActivity.finish();
+                		}
+                        return true;
+                    }
+                });
+ 
+                /** Showing the popup menu */
+                popup.show();
+				
 			}
 		});
 
@@ -89,29 +116,13 @@ public class Login extends Activity {
 
 	}
 
+
+	
 	@Override
-	public void onCreateContextMenu(ContextMenu menu, View v,
-			ContextMenuInfo menuInfo) {
-		super.onCreateContextMenu(menu, v, menuInfo);
-
-		menu.setHeaderTitle("Options ... ");
-		menu.add(0, v.getId(), 0, "Register");
-		menu.add(0, v.getId(), 0, "Quit");
-	}
-
-	@Override
-	public boolean onContextItemSelected(MenuItem item) {
-		if (item.getTitle() == "Register") {
-			Intent intent = new Intent(getApplicationContext(), Register.class);
-			startActivity(intent);
-		}
-
-		else if (item.getTitle() == "Quit") {
-			this.finish();
-		}
-
-		return true;
-	}
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.popup, menu);
+        return true;
+    }
 
 	private class LoginTask extends AsyncTask<Void, Void, Void> {
 
